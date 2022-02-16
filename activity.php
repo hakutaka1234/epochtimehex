@@ -5,21 +5,31 @@
 //Epoch Using Php
 //@hakutaka1234
 //Tahun Bulan Hari
-echo " input year : ";
+$R  = "\e[91m";  //red
+$G  = "\e[92m";  //green
+$B  = "\e[36m";  //blue
+$Y  = "\e[93m"; //yellow
+$W  = "\e[0m";  //White
+echo "$R
+#########################
+
+       CODE BY HAKU
+
+#########################
+";
+echo "\n $B Input Year : ";
 $put=trim(fgets(STDIN));
 if($put==true){
 $Timex="$put"."-12-30 00:00:00";
-$show = strtotime($Timex);
-	$parshe = $show."000";
-	$dectohex = dechex($parshe);
-	//echo "\nYour Code Hex : $dectohex \n";
-	echo "\nYour Code Hex : const-wide v0, 0x".$dectohex."L \n\n";
+	$show = strtotime($Timex);
+	$dec = $show * 1000;
+	$hex = dechex($dec);
+echo "\n".$G." Your Dec : ".$Y."$dec \n ".$G."Your Hex : ".$Y."$hex \n ".$G."Your Code :\n ".$Y."const-wide v0, 0x".$hex."L \n";
 }elseif($put!=true){
-	$defaulttime ="1970-12-30 00:00:00";
+	$defaulttime ="2025-05-05 05:05:05";
 	$show = strtotime($defaulttime);
-	$parshe = $show."000";
-	$dectohex = dechex($parshe);
-	//echo "\nYour Code Hex : $dectohex \n";
-	echo "\nYour Code Hex : const-wide v0, 0x".$dectohex."L \n\n";
+	$dec = $show * 1000;
+	$hex = dechex($dec);
+echo "\n".$G." Your Dec : ".$Y."$dec \n ".$G."Your Hex : ".$Y."$hex \n ".$G."Your Code :\n ".$Y."const-wide v0, 0x".$hex."L \n";
    }
 	?>
